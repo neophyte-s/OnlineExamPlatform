@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script> 
+    <script src="scripts/utils/firebase.js"></script>
+    <script src="scripts/Register.js"></script>
+    <script src="scripts/crud/model/users.js"></script>
+    <link rel="stylesheet" href="assets/login.css">
+    <title>Register</title>
+</head>
+<body>
+
+    <div class="regbox container">
+        <h3 class="text-center">Enter your details to register yourself</h3>
+    <div class="form-group">
+            <label for="">Name</label>
+            <input id="name" class="form-control" type="text" placeholder="Enter Name"> 
+        </div>
+    
+        <div class="form-group">
+            <label for="">Userid</label>
+            <input id="userid" class="form-control" type="text" placeholder="Enter Userid">
+        </div>
+
+        <div class="form-group">
+            <label for="">Password</label>
+            <input id="pwd" class="form-control" type="password" placeholder="Enter Password">
+        </div>
+
+        <div class="form-group">
+            <label for="">Re-enter password</label>
+            <input id="rpwd" class="form-control" type="password" placeholder="Enter Password">
+        </div>
+
+        <div class="text-center">
+            <button class="btn btn-danger" onclick="SubmitRegister()">Sign Up</button>
+            <button onclick="domove()" class='btn btn-success'>Sign In</button>
+            <button class="btn btn-secondary" onclick="doreset()">Reset</button>
+            
+            
+        </div>
+        <!-- <div class='form-group'>
+            <button onclick="SubmitRegister()" class='btn btn-success btn-lg'>Sign Up</button>
+            <button onclick="doLogin()" class='btn btn-success btn-lg'>Sign In</button>
+            <button class="btn btn-secondary btn-lg" onclick="doreset()">Reset</button>
+
+    </div>   -->
+        
+
+    </div>
+
+
+    
+    
+    
+    
+</body>
+</html>
