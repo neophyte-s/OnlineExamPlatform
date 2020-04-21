@@ -1,0 +1,135 @@
+.body{
+    overflow: hidden;
+}
+
+#page{
+    background-image: url(http://getdigitalexperts.com/wp-content/uploads/2017/02/computer.jpg);
+    height: 720px;
+    width: 1534px;
+}
+
+#content{
+    /* display: none; */
+    width: 70%;
+    
+    /* border: 1px solid black; */
+    margin-left: 14%;
+    
+}
+
+#content h1{
+    text-align: center;
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 55px;
+    /* text-transform: uppercase; */
+    background-image: linear-gradient(to bottom, rgba(34, 21, 221, 0.856), rgb(202, 207, 236));
+    margin: 0px;
+    /* text-decoration: underline dotted black; */
+    padding: 10px 0px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+#ques{
+    margin-left: 20px;    
+}
+
+
+#quesdisp{
+    
+    /* background-color: bisque; */
+}
+
+#test{
+    background-image: url(https://images.pexels.com/photos/1985172/pexels-photo-1985172.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    /* background-image: url(https://images2.minutemediacdn.com/image/upload/c_crop,h_843,w_1500,x_0,y_78/f_auto,q_auto,w_1100/v1554995253/shape/mentalfloss/516048-istock-134843485_copy.jpg); */
+    background-size: 1100px 520px;
+    height: 450px;
+    border-radius: 0px 0px 50px 50px;
+}
+
+#ques p{
+    font-size: 23px;
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+#scorecard{
+    /* background-image: url(https://hdwallsource.com/img/2015/9/gradient-background-46249-47587-hd-wallpapers.jpg); */
+    /* background-image: url(https://image.freepik.com/free-vector/pastel-multi-color-gradient-background_1962-500.jpg); */
+    /* background-image: url(https://images2.minutemediacdn.com/image/upload/c_crop,h_843,w_1500,x_0,y_78/f_auto,q_auto,w_1100/v1554995253/shape/mentalfloss/516048-istock-134843485_copy.jpg); */
+    /* background-size: 300px 100px; */
+    /* background: no-repeat; */
+    /* border-radius: 50px 0px 50px 0px; */
+    background-image: linear-gradient(to top, rgba(106, 160, 196, 0.685), rgb(255, 255, 255));
+    /* margin-top: 10px; */
+}
+
+hr{
+    visibility: hidden;
+}
+
+#scorecard h6{
+    margin: -10px 10px;
+    display: inline-block;
+    
+}
+
+#scorecard h3{
+    font-style: oblique;
+    color: rgba(11, 16, 19, 0.747);
+    text-align-last: center;
+    /* border-radius: 20px 0px 20px 0px; */
+    border-bottom: 1px solid lightgray;
+    /* background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.925), rgb(14, 5, 5)); */
+    /* background-image: linear-gradient(to bottom, rgb(88, 15, 90), rgba(115, 174, 201, 0.582)); */
+    background-image: linear-gradient(to bottom, rgba(106, 160, 196, 0.685), rgb(204, 156, 156));
+    padding: 10px 0px;
+    margin: 0px 0px 14px 0px;
+}
+
+#opt span{
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ml{
+    margin: 0px 0px 0px 10px;
+}
+
+.mt{
+    margin-top: 20px;
+}
+
+#numdisp{
+    float: left;
+    width: 50%;
+    margin-left: 32px;
+}
+
+#numdisp h6{
+    display: inline-block;
+}
+
+#timeshow{
+    margin-left: 265px;
+}
+
+.row:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+#quesbuttons button{
+    margin: 0px 10px 0px 0px;
+    border-radius: 0px 12px 0px 12px;
+}
+
+#fbuttons button{
+    border-radius: 0px 15px 0px 15px;
+}
