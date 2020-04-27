@@ -1,0 +1,207 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.5">
+    <title>Welcome Page</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/dashboard/">
+    <!-- <link rel="stylesheet" href="assets/design.css"> -->
+    <link rel="stylesheet" href="assets/scorecard.css">
+
+    <!-- Bootstrap core CSS -->
+<link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+    <script src="scripts/utils/firebase.js"></script>
+    <!-- <link href="assets/dashboard.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="assets/Studentdesign.css">
+    <script src="scripts/crud/controller/studentcontroller.js"></script>
+    <script src="scripts/crud/model/studentquestion.js"></script>
+    <script src="scripts/crud/model/studentquestionoperations.js"></script>
+  </head>
+  <body >
+    <!-- <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Company name</a>
+  <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</nav> -->
+<div id="categories">
+  <h1 id="heading">Categories</h1>
+  <div class="fit">
+    <h3 id="cat1">Web Development</h3>
+    <button id="btn" class="btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Prgramming in C,C++,JAVA</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Database Management</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Data Structures</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Operating System</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Object Oriented Programming</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Data Communication And Networking</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Algorithms And Design Analysis</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Logical Reasoning And Aptitude</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+  <div  class="fit">
+    <h3 id="cat1">Communication Skills</h3>
+    <button id="btn" class=" btn btn-outline btn-warning" onclick="disp(addQuestion('questions'))">Start</button>
+  </div>
+
+</div>
+
+
+
+<div id="page" style="display: none">
+  <div id="content">
+      <h1 id="studentname">Welcome &nbsp</h1>
+      <!-- this is my crud area-->
+      
+      <div id="myModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h2>Score Card</h2>
+              <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <!-- <h3>Score Card</h3> -->
+                <!-- <h6>Total Questions: </h6><h6 id="total"></h6><br>
+                <h6>Attempted Questions: </h6><h6 id="attempted"></h6><br>
+                <h6>Unattempted Questions: </h6><h6 id="unattempted"></h6><br> -->
+                <div id="abcd">
+                    <h6>Maximum Score: </h6><h6 id="maxscore"></h6> <br>
+                    <h6>Correct Questions: </h6><h6 id="rightques"></h6> <br>
+                    <h6>Incorrect Questions: </h6><h6 id="wrongques"></h6> <br>
+                    <h6>Total Score obtained:</h6><h6 id="scoreobtained"></h6> <br>
+                    <h6>Percentage Score obtained:(%) </h6><h6 id="percentageobtained"></h6> <br>
+                </div>
+                <div id="chartContainer" style="height: 370px; width: 50%;"></div>
+            </div>
+            <div class="modal-footer">
+              <!-- <h3>Modal Footer</h3> -->
+            </div>
+          </div>
+        
+        </div>
+      
+      <div id="scorecard">
+          <h3>Score Card</h3>
+          <!-- <h6>Total Questions: </h6><h6 id="total"></h6><br>
+          <h6>Attempted Questions: </h6><h6 id="attempted"></h6><br>
+          <h6>Unattempted Questions: </h6><h6 id="unattempted"></h6><br> -->
+          <h6>Maximum Score: </h6><h6 id="maxscore"></h6> <br>
+          <h6>Correct Questions: </h6><h6 id="rightques"></h6> <br>
+          <h6>Incorrect Questions: </h6><h6 id="wrongques"></h6> <br>
+          <h6>Total Score obtained:</h6><h6 id="scoreobtained"></h6> <br>
+          
+        </div>
+
+        <div id='test'>
+            <!-- <h2>Test started</h2> -->
+            <div id="ques">
+
+                <div class="row">
+                    <div id="numdisp">
+                        <h6>Total Questions: </h6><h6 id="total"></h6><br>
+                        <h6>Attempted Questions: </h6><h6 id="attempted"></h6><br>
+                        <h6>Unattempted Questions: </h6><h6 id="unattempted"></h6>
+                    </div>
+      
+                    <div id="timeshow">
+                      <button class="btn btn-dark"> Time Remaining: <span id="clock"></span></button>
+                    </div>
+                    
+                  </div>
+
+                <div id="quesbuttons" class="form-group">
+                    <hr>
+                    <button onclick="printques(id)" id="0" class="btn btn-danger">Ques1</button>
+                    <button onclick="printques(id)" id="1" class="btn btn-danger">Ques2</button>
+                    <button onclick="printques(id)" id="2" class="btn btn-danger">Ques3</button>
+                    <button onclick="printques(id)" id="3" class="btn btn-danger">Ques4</button>
+                    <button onclick="printques(id)" id="4" class="btn btn-danger">Ques5</button>
+                    <button onclick="printques(id)" id="5" class="btn btn-danger">Ques6</button>
+                    <button onclick="printques(id)" id="6" class="btn btn-danger">Ques7</button>
+                    <button onclick="printques(id)" id="7" class="btn btn-danger">Ques8</button>
+                    <button onclick="printques(id)" id="8" class="btn btn-danger">Ques9</button>
+                    <button onclick="printques(id)" id="9" class="btn btn-danger">Ques10</button>
+      
+                  </div>
+
+              <p id="quesdisp"></p>
+              <div id="opt">
+                <input type="radio" name="option" id="o1" value="a" onclick="save(this.value)"> <span id="op1"></span> <br>
+                <input type="radio" name="option" id="o2" value="b" onclick="save(this.value)"> <span id="op2"></span> <br>
+                <input type="radio" name="option" id="o3" value="c" onclick="save(this.value)"> <span id="op3"></span> <br>
+                <input type="radio" name="option" id="o4" value="d" onclick="save(this.value)"> <span id="op4"></span> <br>
+              </div>
+
+              <div class="form-group">
+                <hr>
+                <button class="btn btn-primary" onclick="prev()">Previous</button>
+                <button class="btn btn-primary ml" onclick="next()">Next</button>
+                <!-- <button class="btn btn-info ml" onclick="save()">Save Response</button> -->
+                <button id="clr" class="btn btn-warning ml" onclick="clearresponse()">Clear Response</button>
+                <button id="submitt" class="btn btn-success ml" onclick="submit()">Submit</button>
+              </div>
+            </div>
+
+            
+        </div>
+
+        
+       <!-- this is my crud area-->
+      
+  </div>
+</div>
+
+</body>
+</html>
