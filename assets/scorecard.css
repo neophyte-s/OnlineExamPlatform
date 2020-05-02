@@ -1,0 +1,97 @@
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+  
+  .modal-body {padding: 2px 16px;}
+  
+  .modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }  
+#scorecard{
+    /* background-image: url(https://hdwallsource.com/img/2015/9/gradient-background-46249-47587-hd-wallpapers.jpg); */
+    /* background-image: url(https://image.freepik.com/free-vector/pastel-multi-color-gradient-background_1962-500.jpg); */
+    /* background-image: url(https://images2.minutemediacdn.com/image/upload/c_crop,h_843,w_1500,x_0,y_78/f_auto,q_auto,w_1100/v1554995253/shape/mentalfloss/516048-istock-134843485_copy.jpg); */
+    /* background-size: 300px 100px; */
+    /* background: no-repeat; */
+    background-image: linear-gradient(to top, rgba(255, 85, 34, 0.904), rgb(255, 255, 255));
+    /* margin-top: 10px; */
+}
+
+hr{
+    visibility: hidden;
+}
+
+#scorecard h6{
+    margin: -10px 10px;
+    display: inline-block;
+}
+
+#scorecard h3{
+    font-style: oblique;
+    color: rgba(75, 164, 224, 0.747);
+    text-align-last: center;
+    border-bottom: 1px solid lightgray;
+    background-image: linear-gradient(to bottom, rgba(7, 7, 7, 0.925), rgb(14, 5, 5));
+    /* background-image: linear-gradient(to bottom, rgb(0, 255, 170), rgb(253, 253, 255)); */
+    padding: 10px 0px;
+    margin: 0px 0px 14px 0px;
+}
